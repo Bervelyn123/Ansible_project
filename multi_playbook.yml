@@ -36,9 +36,5 @@
     file:
       path: /home/fedora/new_dir_grp-U
       state: directory
-    
-  - name: create directory
-    file:
-      path: /home/fedora/new-dir_grp-U2
-      state: directory
+
 ...
