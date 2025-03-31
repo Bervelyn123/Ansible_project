@@ -1,0 +1,12 @@
+---
+- name: Update Group1 servers
+  hosts: Group1
+  become: yes
+
+  tasks:
+  - name: Create Directory
+    file:
+      path: /var/www/html
+      state: directory
+
+...

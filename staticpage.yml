@@ -1,0 +1,13 @@
+---
+- name: Static page
+  hosts: node2
+  become: true
+
+  tasks: 
+  - name: Update static page
+    copy: 
+      src: static.html
+      dest: var/www/html/static.html
+
+  
+...

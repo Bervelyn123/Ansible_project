@@ -1,0 +1,14 @@
+---
+- name: Dynamic page
+  hosts: node5
+  become: true
+
+  tasks: 
+  - name: Update dynamic page
+    copy: 
+      src: dynamic.j2
+      dest: var/www/html/dynamic.html
+      force: yes
+
+  
+...

@@ -1,0 +1,47 @@
+---
+- name: Install Apache server
+  become: yes
+  hosts: Group1
+  
+
+  tasks:
+  - name: Install apache2
+    apt:
+      name: apache2
+      state: present
+    when: ansible_distribution == "ubuntu" or ansible_distribution == "debian"
+
+  - name: start up apache service
+    service: 
+      name: apache2
+      state: started
+    when: ansible_distribution == "Ubuntu" or ansible_distribution == "debian"
+
+
+
+  - name: Enable apache2
+    service: 
+      name: apache2
+      enabled: yes
+    when: ansible_distribution == "Ubuntu" or ansible_distribution == "debian"
+
+
+  - name: Install httpd
+    yum:
+      name: httpd
+      state: present
+    when: ansible_distribution == "Amazon" or ansible_distribution == "fedora"
+
+  - name: start up Httpd server
+    service: 
+      name: httpd
+      state: started
+    when: ansible_distribution == "Amazon" or ansible_distribution == "fedora"
+
+
+
+  - name: Enable Httpd
+    service: 
+      name: httpd
+      enabled: yes
+    when: ansible_distribution == "Amazon" or ansible_distribution == "fedora"
