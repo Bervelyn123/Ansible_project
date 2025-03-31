@@ -1,6 +1,6 @@
 ---
 - name: Maintenance page
-  hosts: node3
+  hosts: node2
   become: true
 
   tasks: 
