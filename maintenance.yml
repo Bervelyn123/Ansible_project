@@ -1,0 +1,13 @@
+---
+- name: Maintenance page
+  hosts: node2
+  become: true
+
+  tasks: 
+  - name: Update maintenance
+    copy: 
+      srce: maintenance.html
+      dest: var/www/html
+
+  
+...
