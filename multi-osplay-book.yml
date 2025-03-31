@@ -9,35 +9,35 @@
     apt:
       name: apache2
       state: present
-      when: ansible_distribrition == "ubuntu"
+    when: ansible_distribrition == "ubuntu"
 
   - name: start up apache service
     service: 
       name: apache2
       state: started
-      when: ansible_distribrition == "Ubuntu"
+    when: ansible_distribrition == "Ubuntu"
 
 
   - name: Enable apache2
     service: 
       name: apache2
       enabled: yes
-      when: ansible_distribrition == "Ubuntu"
+    when: ansible_distribrition == "Ubuntu"
 
   - name: Install httpd
     yum:
       name: Httpd
       state: present
-      when: ansible_distribrition == "Amazon"
+    when: ansible_distribrition == "Amazon"
 
   - name: start up Httpd server
     service: 
       name: Httpd
       state: started
-      when: ansible_distribrition == "Amazon"
+    when: ansible_distribrition == "Amazon"
 
   - name: Enable Httpd
     service: 
       name: Httpd
       enabled: yes
-      when: ansible_distribrition == "Amazon"
+    when: ansible_distribrition == "Amazon"
