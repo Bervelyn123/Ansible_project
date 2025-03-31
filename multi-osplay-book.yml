@@ -15,29 +15,29 @@
     service: 
       name: apache2
       state: started
-    when: ansible_distribrution == "Ubuntu"
+    when: ansible_distribution == "Ubuntu"
 
 
   - name: Enable apache2
     service: 
       name: apache2
       enabled: yes
-    when: ansible_distribrution == "Ubuntu"
+    when: ansible_distribution == "Ubuntu"
 
   - name: Install httpd
     yum:
       name: Httpd
       state: present
-    when: ansible_distribrution == "Amazon"
+    when: ansible_distribution == "Amazon"
 
   - name: start up Httpd server
     service: 
       name: Httpd
       state: started
-    when: ansible_distribrution == "Amazon"
+    when: ansible_distribution == "Amazon"
 
   - name: Enable Httpd
     service: 
       name: Httpd
       enabled: yes
-    when: ansible_distribrution == "Amazon"
+    when: ansible_distribution == "Amazon"
