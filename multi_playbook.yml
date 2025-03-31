@@ -1,6 +1,7 @@
 ---
 - name: Update node1 servers
   hosts: node1
+  become: yes
 
   tasks:
   - name: Create Directory
