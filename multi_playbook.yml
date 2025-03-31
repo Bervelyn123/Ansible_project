@@ -1,6 +1,6 @@
 ---
-- name: Update node1 servers
-  hosts: node1
+- name: Update Group1 servers
+  hosts: Group1
   become: yes
 
   tasks:
