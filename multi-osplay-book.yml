@@ -26,18 +26,18 @@
 
   - name: Install httpd
     yum:
-      name: Httpd
+      name: httpd
       state: present
     when: ansible_distribution == "Amazon"
 
   - name: start up Httpd server
     service: 
-      name: Httpd
+      name: httpd
       state: started
     when: ansible_distribution == "Amazon"
 
   - name: Enable Httpd
     service: 
-      name: Httpd
+      name: httpd
       enabled: yes
     when: ansible_distribution == "Amazon"
