@@ -6,7 +6,7 @@
   tasks: 
   - name: Update maintenance
     copy: 
-      srce: maintenance.html
+      src: maintenance.html
       dest: var/www/html/index.html
 
   
